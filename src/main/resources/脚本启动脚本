@@ -1,0 +1,1 @@
+java -Dapollo.meta=http://123.57.111.202:8080/  -jar gpms-config-sdk-1.0-SNAPSHOT.jar
