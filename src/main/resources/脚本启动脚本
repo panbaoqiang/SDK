@@ -1,1 +1,4 @@
 java -Dapollo.meta=http://123.57.111.202:8080/  -jar gpms-config-sdk-1.0-SNAPSHOT.jar
+
+# 杀死指定端口进程
+netstat -apn | grep 9527 | awk '{print $7}'|tr -cd "[0-9]"| kill -9 `awk '{print $1}'`
