@@ -43,4 +43,9 @@ public class IndexController {
     public RestResponse<Integer> add(int a, int b) {
         return RestResponseBuilder.<Integer>builder().data(a + b).build();
     }
+
+    @GetMapping("delete")
+    public RestResponse<Integer> delete(int a, int b) {
+        return RestResponseBuilder.<Integer>builder().data(a - b).build();
+    }
 }
