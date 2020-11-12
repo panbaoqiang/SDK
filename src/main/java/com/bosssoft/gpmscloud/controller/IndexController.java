@@ -38,4 +38,9 @@ public class IndexController {
     public RestResponse<String> indexWithToken() {
         return RestResponseBuilder.<String>builder().data("welcome to GPX-BASIC-PLATFORM! Authentication Success!").build();
     }
+
+    @GetMapping("add")
+    public RestResponse<Integer> add(int a, int b) {
+        return RestResponseBuilder.<Integer>builder().data(a + b).build();
+    }
 }
