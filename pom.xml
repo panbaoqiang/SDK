@@ -115,6 +115,28 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
+        <repository>
+            <id>bosssoft</id>
+            <name>bosssoft Repository</name>
+            <url>http://58.22.61.222:8081/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>bosssoft-gpx</id>
+            <name>bosssoft GPX Repository</name>
+            <url>http://58.22.61.222:8081/nexus/content/groups/gpx-public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
     </repositories>
     <build>
         <plugins>
