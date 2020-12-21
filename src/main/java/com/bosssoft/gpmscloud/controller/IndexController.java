@@ -48,4 +48,35 @@ public class IndexController {
     public RestResponse<Integer> delete(int a, int b) {
         return RestResponseBuilder.<Integer>builder().data(a - b).build();
     }
+
+//    @PostConstruct
+//    public void test() {
+//        openServer();
+//    }
+//
+//    private void openServer() {
+//        Thread thread = new Thread(() -> {
+//            FileUpLoadServer fileUpLoadServer = null;
+//            try {
+//                fileUpLoadServer = new FileUpLoadServer(FinalVariables.SERVER_PORT);
+//                fileUpLoadServer.load();
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        }, "server");
+//        thread.start();
+//    }
+
+    /**
+     * redis测试调用,结合@Cacheable
+     *
+     * @return
+     */
+    @GetMapping("pathTest")
+    public RestResponse<String> pathTest(String path, String filename) {
+
+        String newKey = path + "/" + filename;
+        return RestResponseBuilder.<String>builder().data(String.join("*", newKey.split("\\/+"))).build();
+    }
+
 }

@@ -8,6 +8,13 @@ public class MyBloomFilter<T> {
     private static final int DEFAULT_SIZE = 2 << 28;
     //bit数组，用来存放结果
     private static BitSet bitSet = new BitSet(DEFAULT_SIZE);
+
+
+    public static void main(String[] args) {
+        bitSet.set(1, true);
+        System.out.println(bitSet.size());
+    }
+
     //后面hash函数会用到，用来生成不同的hash值，可随意设置，别问我为什么这么多8，图个吉利
     private static final int[] ints = {1, 6, 16, 38, 58, 68};
 
